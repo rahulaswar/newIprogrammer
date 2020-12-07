@@ -12,7 +12,7 @@ export class ParentComponent implements OnInit {
  public  SendCount = 0;
  public  helloText = '';
  public myForm: FormGroup;
-  constructor(private storageService: StorageService,private messageService: SendMessageService,public fb: FormBuilder) { }
+  constructor(private storageService: StorageService, private messageService: SendMessageService,public fb: FormBuilder) { }
 
   ngOnInit(): void {
 
@@ -20,7 +20,7 @@ export class ParentComponent implements OnInit {
       message: [null, Validators.compose([Validators.required, Validators.pattern('^[#.0-9a-zA-Z\s,-_`~!%^&*()_+-=?<>${}[]|\/]+$')])],
     });
     // set local storage hard coded value
-    this.setLocalStorageValue('name','Rahul');
+    this.setLocalStorageValue('name', 'Rahul');
 
     // get local storage value
     console.log(this.getLocalStorageValue('name'));

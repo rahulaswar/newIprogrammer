@@ -8,7 +8,7 @@ import { SendMessageService } from 'src/app/services/send-message.service';
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnInit,OnDestroy {
+export class ChildComponent implements OnInit, OnDestroy {
   @Input() Count;
   @Output() hello: EventEmitter<string> = new EventEmitter<string>();
   public messages: any[] = [];

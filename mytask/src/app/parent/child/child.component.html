@@ -1,0 +1,11 @@
+<br>
+<div >
+  <h3>Child Component</h3>
+  <p>Count recieved from Parent - {{Count}}</p>
+  <button  (click)='sayHello($event)'>Say 'Hello' to Parent</button>
+  <br>
+  <p>Getting Message From Parent:</p>
+  <p *ngFor="let i of messages">
+      {{i}}
+  </p>
+</div>

@@ -1,0 +1,36 @@
+<div >
+    <h3>Parent Component</h3>
+    <br>
+    <button  (click)="sendToChild()">Send Count to Child</button>
+    <br><br>
+    <p *ngIf="helloText === 'Hello'">'{{helloText}}' recieved from Child</p>
+
+    <form class="example-form" [formGroup]="myForm">
+          <div class="col-md-6">
+            <mat-form-field class="example-full-width">
+              <mat-label>Enter message</mat-label>
+              <input matInput formControlName="message" >
+              <mat-error *ngIf="myForm.controls['message'].hasError('required')">
+                message is require
+            </mat-error>
+            <mat-error *ngIf="myForm.controls['message'].hasError('pattern')">
+             Please enter message
+        </mat-error>
+            </mat-form-field>
+        <br>
+          <button  mat-button color="accent" (click)="sendMessage()">Send Message</button>
+    </div>
+      
+    
+    
+        
+        
+      
+       
+
+      </form>
+   
+  </div>
+  <br>
+------------------------------------------------------------------------------
+  <app-child [Count]="SendCount" (hello)="sayHello($event)"></app-child>
